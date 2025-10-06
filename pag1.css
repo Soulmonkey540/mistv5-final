@@ -1,0 +1,358 @@
+ /* Estilos gerais */
+
+        body {
+            background-image: linear-gradient(
+                #6a8aff,
+                #b2fbff
+                
+
+            );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        
+        /* Contêiner principal do formulário */
+        .login-container {
+            background-image: linear-gradient(
+                #84a9ff,
+                #f5f8ff
+            );
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgb(235, 224, 224);
+            width: 350px;
+            height: 295px;
+            text-align: center;
+            
+        }
+        
+        /* Títulos */
+ 
+        
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Campos de entrada (inputs) */
+        input::placeholder{
+            color:#fff
+        }
+        input {
+            background-image: linear-gradient(
+                #064bec,
+                #80a4f8
+            );
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid black;
+            border-radius: 15px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        
+        /* Botão */
+        .btn {
+            width: 16%;
+            position: absolute;
+            top:67%;
+            right: 42%;
+            padding: 12px;
+             background-image: linear-gradient(
+                #001f65,
+                #6895fd
+            );
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Links (esqueceu a senha, suporte) */
+        .link {
+            color: gray;
+            width: 9%;
+            position:absolute;
+            top:93%;
+            right:.15%;
+           
+            padding: 10px;
+             background-image: linear-gradient(
+                 #84a9ff,
+                #f5f8ff
+            );
+            border: none;
+            border-radius: 15px;
+
+            display:block;
+            margin-top: 10px;
+            color: white;
+           
+            font-size: 14px;
+        }
+
+        .pares {
+            
+            width: 9%;
+               position:absolute;
+            top:80%;
+            right:55.6%;
+           
+            padding: 9px;
+             background-image: linear-gradient(
+                #001f65,
+                #6895fd
+            );
+            border: none;
+            border-radius: 15px;
+
+            display:block;
+            margin-top: 1px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+         }
+        
+        a:hover {
+            text-decoration:underline;
+          
+        }
+        .img{
+            position: absolute;
+        
+        }
+ .row1 {
+      width: 16%;
+      height:5%;
+            position: absolute;
+            top:0%;
+            right: 90%;
+            padding: 24%;
+             background-image: linear-gradient(
+                180deg,
+                #001f65,
+                #6895fd
+        
+            );
+            color: #fff;
+            border: none;
+            border-radius: 1px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+    
+
+
+ }
+  .row2 {
+      width: 82%;
+      height:2%;
+            position: absolute;
+            top:0%;
+            right: 0%;
+            padding: 4%;
+             background-image: linear-gradient(
+                180deg,
+                #001f65,
+                #6895fd
+               
+        
+            );
+            color: #fff;
+            border: none;
+            border-radius: 1px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+    
+
+
+ }
+ #tres {
+    height:50%;
+    width:90%;
+    position: absolute;
+    right: 0%;
+    top: 15%;
+    z-index: 1;
+
+}
+.welcom{
+    position: absolute;
+    right: 40%;
+    top: 48%;
+      background-image: linear-gradient(
+                #001f65,
+                #6895fd
+        
+            );
+            color: #fff;
+            border: 10px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: strong;
+            cursor: pointer;
+            z-index: 10;
+            margin-top: 1px;
+}
+
+.abt1{
+    position: absolute;
+    right: 12%;
+    top: 55%;
+    width: 250px;
+      background-image: linear-gradient(
+                #001f65,
+                #6895fd
+        
+            );
+            color: #fff;
+            border: 1px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: strong;
+            cursor: pointer;
+            z-index: 10;
+            text-align: center;
+            margin-top: 1px;
+}
+.abt2{
+    position: absolute;
+    right: 65%;
+    top: 55%;
+    width: 250px;
+      background-image: linear-gradient(
+                #001f65,
+                #6895fd
+        
+            );
+            color: #fff;
+            border: 1px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: strong;
+            cursor: pointer;
+            z-index: 10;
+            text-align: center;
+            margin-top: 1px;
+}
+
+.jgs{
+     background:linear-gradient( #001f65,
+                #6895fd);
+            position: absolute;
+            border-radius: 50px;
+            top: 25%;
+            right: 3%;
+             width: 10%;
+            height: 10%;
+            text-align: center;
+
+
+}
+
+.wk{
+    background:linear-gradient( #001f65,
+                #6895fd);
+            position: absolute;
+            border-radius: 50px;
+            top: 50%;
+            right: 3%;
+            width: 10%;
+            height: 10%;
+            text-align: center;
+
+}
+
+.gld{
+    background:linear-gradient( #001f65,
+                #6895fd);
+            position: absolute;
+            border-radius: 50px;
+            top: 75%;
+            right: 3%;
+            width: 10%;
+            text-align: center;
+            height: 10%;
+
+}
+
+.spr{
+     background:linear-gradient( #001f65,
+                #6895fd);
+            position: absolute;
+            border-radius: 50px;
+            top: 20%;
+            right: 20%;
+             width: 5%;
+            height: 40%;
+            text-align: center;
+            text-size-adjust: auto;
+
+
+}
+
+.prf{
+    background:linear-gradient( #001f65,
+                #6895fd);
+            position: absolute;
+            border-radius: 45%;
+            top: 20%;
+            right: 30%;
+            width: 6%;
+            height: 40%;
+            text-align: center;
+            text-size-adjust: auto;
+
+}
+
+.con{
+    background:linear-gradient( #001f65,
+                #6895fd);
+            position: absolute;
+            border-radius: 70px;
+            top: 20%;
+            right: 10%;
+            width: 5%;
+            text-align: center;
+            height: 40%;
+            text-size-adjust: auto;
+
+}
+
+.txt1{
+       background:linear-gradient( #001f65,
+                #6895fd);
+            position: relative;
+            right: -38%;
+            top: 30%;
+            border-radius: 20px;
+            width: 29%;
+            height: 22%;
+
+
+}
+.txt2{
+       background:linear-gradient( #001f65,
+                #6895fd);
+            position: relative;
+            right: 38%;
+            top: 30%;
+            border-radius: 20px;
+            width: 20%;
+            height: 20%;
+
+
+}

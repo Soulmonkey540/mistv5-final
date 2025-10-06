@@ -1,0 +1,111 @@
+body {background:linear-gradient(to right,#6a8aff,
+                #b2fbff);
+    
+    
+    
+    }
+           .container {
+            background-image: linear-gradient(
+                to bottom,
+                #84a9ff,
+                #f5f8ff
+            );
+            position:absolute;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgb(235, 224, 224);
+            width: 90%;
+            height: 95%;
+            text-align: center;
+            right: 5%;
+            
+        }
+        .head{
+            position: relative;
+            background: linear-gradient( #001f65,
+                #6895fd
+
+            );
+             border-radius: 20px;
+            width:11%;
+            right: -45%;
+        }
+          .i1{
+           position: absolute;
+           width: 15%;
+           height: 20%;
+           top: 40%;
+           right: 75%;
+            border-radius: 30px;
+           
+
+
+
+        }
+          .i2{
+             position: absolute;
+           width: 15%;
+           height: 20%;
+           top: 40%;
+           right:55%;
+            border-radius: 30px;
+
+          
+        }
+          .i3{
+             position: absolute;
+            width: 15%;
+           height: 20%;
+           top: 40%;
+           right: 35%;
+            border-radius: 30px;
+
+          
+        }
+          .i4{
+             position: absolute;
+            width: 15%;
+           height: 20%;
+           top: 40%;
+           right: 15%;
+            border-radius: 30px;
+
+          
+        }
+          .i5{
+             position: absolute;
+           width: 15%;
+           height: 20%;
+           top: 70%;
+           right: 75%;
+            border-radius: 30px;
+
+          
+        }
+          .i6{
+             position: absolute;
+         width: 15%;
+           height: 20%;
+           top: 70%;
+           right: 55%;
+            border-radius: 30px;
+
+          
+        }
+          .i7{
+             position: absolute;
+           width: 15%;
+           height: 20%;
+           top: 70%;
+           right: 35%;
+            border-radius: 30px;
+          
+        }
+          .i8{
+             position: absolute;
+          width: 15%;
+           height: 20%;
+           top: 70%;
+           right: 15%;
+           border-radius: 30px;
+          
+        }

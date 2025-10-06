@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Configurações</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right,#84a9ff,#f5f8ff);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      background: linear-gradient(#84a9ff,#f5f8ff);
+      padding: 20px;
+      border-radius: 15px;
+      width: 800px;
+      height: 500px;
+    }
+
+    /* Menu lateral */
+    .sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      margin-right: 40px;
+    }
+
+    .sidebar button {
+      background: linear-gradient(to bottom,#001f65,#6895fd);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 15px 25px;
+      width: 150px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .sidebar button:hover {
+      background: linear-gradient(to bottom, #5a78b0, #3f4c66);
+    }
+
+    /* Área de conteúdo */
+    .content {
+      flex: 1;
+      background: linear-gradient(#84a9ff,#f5f8ff);
+      padding: 30px;
+      border-radius: 20px;
+    }
+
+    .content h2 {
+      font-size: 28px;
+      color: #1d2d50;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .option {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: linear-gradient(to bottom,#001f65,#6895fd);
+      padding: 15px 20px;
+      border-radius: 25px;
+      color: white;
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+
+    /* Botão de alternância */
+    .toggle {
+      position: relative;
+      width: 50px;
+      height: 25px;
+      background: #5a2f7a;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .toggle::before {
+      content: "";
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 19px;
+      height: 19px;
+      background: white;
+      border-radius: 50%;
+      transition: transform 0.3s;
+    }
+
+    .toggle.active {
+      background: #3c1455;
+    }
+
+    .toggle.active::before {
+      transform: translateX(25px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Menu lateral -->
+    <div class="sidebar">
+       <a href="pag3.html">
+  <button class="btn1">Perfil</button>
+  </a>
+      <a href="pag3.html">
+
+      <button class="btn2">Amizades</button>
+      </a>
+      
+      <a href="pag5.html">
+      <button class="btn3">Vínculos</button>
+      </a>
+      <a href="pag6.html">
+      <button class="btn4">Privacidade</button>
+      </a>
+      <a href="pag7.html">
+      <button class="btn5">Config Hardware</button>
+      </a>
+    </div>
+
+    <!-- Área principal -->
+    <div class="content">
+      <h2>Exibir:</h2>
+
+      <div class="option">
+        <span>Conquistas</span>
+        <div class="toggle"></div>
+      </div>
+
+      <div class="option">
+        <span>Nome de usuário</span>
+        <div class="toggle"></div>
+      </div>
+
+      <div class="option">
+        <span>Amigos</span>
+        <div class="toggle"></div>
+      </div>
+
+      <div class="option">
+        <span>Tempo de jogo</span>
+        <div class="toggle"></div>
+      </div>
+
+      <div class="option">
+        <span>Biblioteca</span>
+        <div class="toggle"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Função para alternar os switches
+    document.querySelectorAll('.toggle').forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

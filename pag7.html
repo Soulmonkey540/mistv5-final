@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel de Configuração</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background: linear-gradient(to right,#84a9ff,#f5f8ff);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    .container {
+      display: flex;
+      width: 100%;
+      max-width: 1000px;
+      background: linear-gradient(#84a9ff,#f5f8ff);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Menu Lateral */
+    .sidebar {
+      width: 200px;
+      background: linear-gradient(to bottom, #001f65, #6895fd);
+      padding: 30px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .sidebar button {
+      width: 80%;
+      padding: 12px;
+      margin: 8px 0;
+      background: rgba(255, 255, 255, 0.1);
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .sidebar button:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateX(5px);
+    }
+    
+    /* Conteúdo Principal */
+    .main-content {
+      flex: 1;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+    
+    .top-section {
+      display: flex;
+      justify-content: center;
+    }
+    
+    .chart-section {
+      background: #f9f9f9;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .chart-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #5a2b80;
+    }
+    
+    #chart {
+      max-width: 200px;
+      max-height: 200px;
+    }
+    
+    .bottom-section {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    
+    .modes, .legend {
+      flex: 1;
+      background: linear-gradient(to bottom,#001f65,#6895fd);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    }
+    
+    h3 {
+      color:white;
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .mode-option {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 12px 0;
+    }
+    
+    /* Switch personalizado */
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+    
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 24px;
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+    
+    input:checked + .slider {
+      background-color: #5a2b80;
+    }
+    
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+    
+    /* Legenda */
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin: 12px 0;
+    }
+    
+    .color {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    
+    .red {
+      background-color: #ff2b2b;
+    }
+    
+    .purple {
+      background-color: #5a2b80;
+    }
+    
+    .yellow {
+      background-color: #f2d13b;
+    }
+    
+    /* Responsividade */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      
+      .sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 15px;
+      }
+      
+      .sidebar button {
+        width: auto;
+        margin: 5px;
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+      
+      .bottom-section {
+        flex-direction: column;
+      }
+    }
+     .btn1 {
+       position: absolute;
+      background: linear-gradient(#001f65,#6895fd);
+      color: white;
+      top: 10%;
+      width: 10%;
+      right: 90%;
+      
+      padding: 12px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s;
+      text-align: left;
+      right: 90%;
+    }
+      .btn2 {
+         position: absolute;
+      background: linear-gradient(#001f65,#6895fd);
+      color: white;
+       top: 20%;
+      width: 10%;
+      border: none;
+      padding: 12px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s;
+      text-align: left;
+      right: 90%;
+    }
+      .btn3 {
+         position: absolute;
+      background: linear-gradient(#001f65,#6895fd);
+      color: white;
+       top: 30%;
+      width: 10%;
+      border: none;
+      padding: 12px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s;
+      text-align: left;
+      right: 90%;
+    }
+      .btn4 {
+        position: absolute;
+      background: linear-gradient(#001f65,#6895fd);
+      color:  white;
+       top: 40%;
+      width: 10%;
+      border: none;
+      padding: 12px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s;
+      text-align: left;
+      right: 90%;
+    }
+      .btn5 {
+         position: absolute;
+      background: linear-gradient(#001f65,#6895fd);
+      color: white;
+       top: 50%;
+      width: 10%;
+      border: none;
+      padding: 12px;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: all 0.3s;
+      text-align: left;
+      right: 90%;
+    }
+  </style>
+</head>
+<body>
+     <a href="pag3.html">
+  <button class="btn1">Perfil</button>
+  </a>
+      <a href="pag3.html">
+
+      <button class="btn2">Amizades</button>
+      </a>
+      
+      <a href="pag5.html">
+      <button class="btn3">Vínculos</button>
+      </a>
+      <a href="pag6.html">
+      <button class="btn4">Privacidade</button>
+      </a>
+      <a href="pag7.html">
+      <button class="btn5">Config Hardware</button>
+      </a>
+  <div class="container">
+    <!-- Menu Lateral -->
+    
+      
+  
+
+    <!-- Conteúdo Principal -->
+    <main class="main-content">
+      <div class="top-section">
+        <!-- Gráfico -->
+        <div class="chart-section">
+          <div class="chart-title">Uso de Recursos</div>
+          <canvas id="chart"></canvas>
+        </div>
+      </div>
+
+      <div class="bottom-section">
+        <!-- Modos -->
+        <div class="modes">
+          <h3>Modos</h3>
+          <div class="mode-option">
+            <span>Equilibrado</span>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="mode-option">
+            <span>Desempenho</span>
+            <label class="switch">
+              <input type="checkbox" checked>
+              <span class="slider"></span>
+            </label>
+          </div>
+          <div class="mode-option">
+            <span>Economia</span>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider"></span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Legenda -->
+        <div class="legend">
+          <h3>Legenda</h3>
+          <div class="legend-item">
+            <span class="color red"></span> Ram
+          </div>
+          <div class="legend-item">
+            <span class="color purple"></span> CPU
+          </div>
+          <div class="legend-item">
+            <span class="color yellow"></span> Internet
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Script para o gráfico -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const ctx = document.getElementById('chart').getContext('2d');
+      new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['RAM', 'CPU', 'Internet'],
+          datasets: [{
+            data: [30, 45, 25],
+            backgroundColor: ['#ff2b2b', '#5a2b80', '#f2d13b'],
+            borderWidth: 0,
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          plugins: {
+            legend: { 
+              display: false 
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  return context.label + ': ' + context.raw + '%';
+                }
+              }
+            }
+          },
+          cutout: '70%'
+        }
+      });
+    });
+  </script>
+</body>

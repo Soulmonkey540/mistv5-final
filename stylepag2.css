@@ -1,0 +1,133 @@
+ /* Estilos gerais */
+
+        body {
+            background-image: linear-gradient(
+                #6a8aff,
+                #b2fbff
+                
+
+            );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+        
+        /* Contêiner principal do formulário */
+        .login-container {
+            background-image: linear-gradient(
+                #84a9ff,
+                #f5f8ff
+            );
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgb(235, 224, 224);
+            width: 350px;
+            height: 295px;
+            text-align: center;
+            
+        }
+        
+        /* Títulos */
+        h2 {
+            margin-bottom: 20px;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Campos de entrada (inputs) */
+        input::placeholder{
+            color:#fff
+        }
+        input {
+            background-image: linear-gradient(
+                #064bec,
+                #80a4f8
+            );
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid black;
+            border-radius: 15px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        
+        /* Botão */
+        .btn {
+            width: 16%;
+            position: absolute;
+            top:67%;
+            right: 42%;
+            padding: 12px;
+             background-image: linear-gradient(
+                #001f65,
+                #6895fd
+            );
+            color: #fff;
+            border: none;
+            border-radius: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Links (esqueceu a senha, suporte) */
+        .link {
+            color: gray;
+            width: 9%;
+            position:absolute;
+            top:93%;
+            right:.15%;
+           
+            padding: 10px;
+             background-image: linear-gradient(
+                 #84a9ff,
+                #f5f8ff
+            );
+            border: none;
+            border-radius: 15px;
+
+            display:block;
+            margin-top: 10px;
+            color: white;
+           
+            font-size: 14px;
+        }
+
+        .pares {
+            
+            width: 9%;
+               position:absolute;
+            top:80%;
+            right:55.6%;
+           
+            padding: 9px;
+             background-image: linear-gradient(
+                #001f65,
+                #6895fd
+            );
+            border: none;
+            border-radius: 15px;
+
+            display:block;
+            margin-top: 1px;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+         }
+        
+        a:hover {
+            text-decoration:underline;
+          
+        }
+        

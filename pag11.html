@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Downloads</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: #1e1e2e;
+      color: #cdd6f4;
+      padding: 20px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    
+    .box {
+      background-color: #313244;
+      border-radius: 10px;
+      padding: 20px;
+      flex: 1;
+      min-width: 300px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    h2 {
+      margin-bottom: 15px;
+      color: #74c7ec;
+      font-size: 1.5rem;
+      border-bottom: 2px solid #45475a;
+      padding-bottom: 8px;
+    }
+    
+    .download-item {
+      display: flex;
+      align-items: center;
+      padding: 12px;
+      background-color: #45475a;
+      border-radius: 8px;
+      margin-bottom: 10px;
+      transition: transform 0.2s;
+    }
+    
+    .download-item:hover {
+      transform: translateY(-2px);
+      background-color: #585b70;
+    }
+    
+    .label {
+      background-color: #74c7ec;
+      color: #1e1e2e;
+      font-weight: bold;
+      padding: 4px 8px;
+      border-radius: 4px;
+      margin-right: 12px;
+    }
+    
+    .download-item img {
+      width: 50px;
+      height: 50px;
+      object-fit: cover;
+      border-radius: 6px;
+      margin-right: 12px;
+    }
+    
+    .progress-circle {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: conic-gradient(#a6e3a1 0% 76%, #313244 76% 100%);
+      margin-left: auto;
+      position: relative;
+    }
+    
+    .progress-circle::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 10px;
+      font-weight: bold;
+      color: #cdd6f4;
+    }
+    
+    .downloads-section {
+      background-color: #313244;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    
+    .progress-bar {
+      height: 20px;
+      background-color: #45475a;
+      border-radius: 10px;
+      margin: 15px 0;
+      overflow: hidden;
+    }
+    
+    .fill {
+      height: 100%;
+      background: linear-gradient(90deg, #74c7ec, #89dceb);
+      border-radius: 10px;
+      width: 76%;
+      transition: width 0.3s ease;
+    }
+    
+    .downloads-section p {
+      margin-top: -10px;
+      margin-bottom: 20px;
+      padding-left: 5px;
+    }
+    
+    /* Estilos para os placeholders das imagens */
+    .download-item img[src*="monster-hunter"],
+    .download-item img[src*="borderlands"],
+    .download-item img[src*="fatal-fury"] {
+      background-color: #6c7086;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #cdd6f4;
+      font-size: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Fila de Downloads -->
+    <div class="box">
+      <h2>Fila de downloads</h2>
+      <div class="download-item">
+        <img src="i22.jpg" alt="Monster Hunter">
+        <div class="progress-circle"></div>
+      </div>
+      <div class="download-item">
+        <img src="i23.jpg" alt="Borderlands 4">
+        <div class="progress-circle"></div>
+      </div>
+    </div>
+
+    <!-- Downloads Concluídos -->
+    <div class="box">
+      <h2>Concluídos</h2>
+      <div class="download-item">
+
+        <img src="i24.jpg" alt="Fatal Fury">
+      </div>
+    </div>
+  </div>
+
+  <!-- Barra de progresso geral -->
+  <div class="downloads-section">
+    <h2>Downloads em andamento</h2>
+    <div class="progress-bar">
+      <div class="fill" style="width:0%"></div>
+    </div>
+    <p>0% - Monster Hunter</p>
+
+    <div class="progress-bar">
+      <div class="fill" style="width:0%"></div>
+    </div>
+    <p>0% - Borderlands 4</p>
+
+    <div class="progress-bar">
+      <div class="fill" style="width:0%"></div>
+    </div>
+    <p>0% - Avowed</p>
+  </div>
+
+  <script>
+    // Simulação de progresso de download
+    document.addEventListener('DOMContentLoaded', function() {
+      const progressBars = document.querySelectorAll('.fill');
+      const progressCircles = document.querySelectorAll('.progress-circle');
+      const progressTexts = document.querySelectorAll('.downloads-section p');
+      
+      // Simular progresso
+      let progress = 0;
+      const interval = setInterval(() => {
+        progress += Math.random() * 2;
+        
+        if (progress >= 100) {
+          progress = 100;
+          clearInterval(interval);
+        }
+        
+        // Atualizar barras de progresso
+        progressBars.forEach(bar => {
+          bar.style.width = `${progress}%`;
+        });
+        
+        // Atualizar círculos de progresso
+        progressCircles.forEach(circle => {
+          circle.style.background = `conic-gradient(#a6e3a1 0% ${progress}%, #313244 ${progress}% 100%)`;
+          const afterElement = circle.querySelector('::after') || circle;
+          if (circle.nextElementSibling?.className === 'progress-text') {
+            circle.nextElementSibling.textContent = `${Math.round(progress)}%`;
+          }
+        });
+        
+        // Atualizar textos
+        progressTexts.forEach(text => {
+          const parts = text.textContent.split(' ');
+          parts[0] = `${Math.round(progress)}%`;
+          text.textContent = parts.join(' ');
+        });
+        
+      }, 1000);
+    });
+  </script>
+</body>
+</html>

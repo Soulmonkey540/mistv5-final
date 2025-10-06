@@ -1,0 +1,320 @@
+.head {
+      width: 100%;
+      height:20%;
+            position: absolute;
+            top:0%;
+            right: 0%;
+            padding: 2%;
+             background-image: linear-gradient(
+                180deg,
+                #001f65,
+                #6895fd
+        
+            );
+            color: #fff;
+            border: none;
+            border-radius: 1px;
+}
+.back{
+   background-image: linear-gradient(
+                #84a9ff,#f5f8ff);
+
+}
+
+.side {
+      width: 50%;
+      height:150%;
+            position: absolute;
+            top:0%;
+            right: 85%;
+
+             background-image: linear-gradient(
+                180deg,
+                #001f65,
+                #6895fd
+        
+            );
+            color: #fff;
+}
+     .dest {
+        position: absolute;
+            background-image: linear-gradient(
+                #84a9ff,
+                #f5f8ff
+            );
+           
+            right: 32%;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgb(235, 224, 224);
+            width: 22%;
+            height: 50%;
+            text-align: center;
+            padding-top: 0%;
+         
+            
+        }
+
+         .jog {
+        position: absolute;
+            background-image: linear-gradient(
+                #84a9ff,
+                #f5f8ff
+            );
+           top: 5%;
+            right: 5%;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px rgb(235, 224, 224);
+            width: 22%;
+            height: 5%;
+            text-align: center;
+            padding-top: 0%;
+         
+            
+        }
+
+        .rpg {
+            position: absolute;
+            top: 15%;
+            right: 6%;
+            width: 19%;
+            height: 5%;
+            border-radius:30%;
+            text-align:center;
+        
+              background-image: linear-gradient(
+             #1b9986,
+             #c4fff0
+            );
+
+
+
+
+
+
+        }
+        .adv {
+                  position: absolute;
+            top: 25%;
+            right: 6%;
+            width: 19%;
+            height: 5%;
+            border-radius:30%;
+            text-align:center;
+        
+              background-image: linear-gradient(
+               #226214,#43cc25
+            );
+
+
+
+
+
+
+        }
+
+
+        
+        .snd {      
+            position: absolute;
+            top:35%;
+            right: 6%;
+            width: 19%;
+            height: 5%;
+            border-radius:30%;
+            text-align:center;
+        
+              background-image: linear-gradient(
+              #997300,#ffc000
+            );
+
+
+
+
+
+
+        }
+
+
+    
+        .trr{
+                  position: absolute;
+            top: 45%;
+            right: 6%;
+            width: 19%;
+            height: 5%;
+            border-radius:30%;
+            text-align:center;
+        
+              background-image: linear-gradient(
+              #731919,#e52b2b
+            );
+
+
+
+
+
+
+        }
+
+
+        
+        .fps{
+                  position: absolute;
+            top: 55%;
+            right: 6%;
+            width: 19%;
+            height: 5%;
+            border-radius:30%;
+            text-align:center;
+        
+              background-image: linear-gradient(
+              #963e15,#f4773e
+            );
+
+
+
+
+
+
+        }
+ 
+
+        
+        .blt {
+                  position: absolute;
+            top:65%;
+            right: 6%;
+            width: 19%;
+            height: 5%;
+            border-radius:30%;
+            text-align:center;
+        
+              background-image: linear-gradient(
+               #431043,#b34681
+            );
+
+
+
+
+
+
+        }
+
+
+        
+        .vn{
+                  position: absolute;
+            top: 75%;
+            right: 6%;
+            width: 19%;
+            height: 5%;
+            border-radius:30%;
+            text-align:center;
+        
+              background-image: linear-gradient(
+               #004d48,#3ff3e7
+            );
+
+
+
+
+
+
+        }
+
+
+       
+        .pzl{
+            position: absolute;
+            top: 85%;
+            right: 6%;
+            width: 19%;
+            height: 5%;
+            border-radius:30%;
+            text-align:center;
+        
+              background-image: linear-gradient(
+             #001f65,#6895fd
+            );
+
+
+
+
+
+
+        }
+        .i1{
+           position: absolute;
+           width: 10%;
+           height: 20%;
+           top: 40%;
+           right: 70%;
+           
+
+
+
+        }
+          .i2{
+             position: absolute;
+           width: 10%;
+           height: 20%;
+           top: 40%;
+           right:55%;
+
+          
+        }
+          .i3{
+             position: absolute;
+            width: 10%;
+           height: 20%;
+           top: 40%;
+           right: 40%;
+
+          
+        }
+          .i4{
+             position: absolute;
+            width: 10%;
+           height: 20%;
+           top: 40%;
+           right: 25%;
+
+          
+        }
+          .i5{
+             position: absolute;
+           width: 10%;
+           height: 20%;
+           top: 70%;
+           right: 70%;
+
+          
+        }
+          .i6{
+             position: absolute;
+         width: 10%;
+           height: 20%;
+           top: 70%;
+           right: 55%;
+
+          
+        }
+          .i7{
+             position: absolute;
+           width: 10%;
+           height: 20%;
+           top: 70%;
+           right: 40%;
+          
+        }
+          .i8{
+             position: absolute;
+          width: 10%;
+           height: 20%;
+           top: 70%;
+           right: 25%;
+          
+        }
+
+
+      
